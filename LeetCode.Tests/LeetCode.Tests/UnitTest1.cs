@@ -21,6 +21,12 @@ namespace LeetCode.Tests
         [TestCase("XI", 11, TestName = "Test 7")]
         [TestCase("XXI", 21, TestName = "Test 8")]
         [TestCase("XIX", 19, TestName = "Test 9")]
+        [TestCase("M", 1000, TestName = "Test 10")]
+        [TestCase("D", 500, TestName = "Test 11")]
+        [TestCase("C", 100, TestName = "Test 12")]
+        [TestCase("L", 50, TestName = "Test 13")]
+        [TestCase("I", 1, TestName = "Test 14")]
+        [TestCase("MDCLXVI", 1666, TestName = "Test 15")]
         public void Problem(string roman, int target)
         {
             RomanInterpreter interpreter = new RomanInterpreter();
@@ -119,7 +125,7 @@ namespace LeetCode.Tests
             }
             class ThousandExpression : Expression
             {
-                public override string One() { return " "; }
+                public override string One() { return "M"; }
                 public override string Four() { return " "; }
                 public override string Five() { return " "; }
                 public override string Nine() { return " "; }
