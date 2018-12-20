@@ -11,7 +11,16 @@ namespace LeetCode.Tests
     
     public class UnitTest1
     {
-        [Test]       
+        [Test]
+        [TestCase("I",      1,      TestName = "I")]
+        [TestCase("III",    3,      TestName = "III")]
+        [TestCase("IV",     4,      TestName = "IV")]
+        [TestCase("V",      5,      TestName = "V")]
+        [TestCase("VI",     6,      TestName = "VI")]
+        [TestCase("IX",     9,      TestName = "IX")]
+        [TestCase("X",      10,     TestName = "X")]
+        [TestCase("XI",     11,     TestName = "XI")]        
+
         [TestCase("III", 3, TestName = "Test 1")]
         [TestCase("IV",  4, TestName = "Test 2")]
         [TestCase("V",   5, TestName = "Test 3")]
@@ -26,7 +35,7 @@ namespace LeetCode.Tests
         [TestCase("C", 100, TestName = "Test 12")]
         [TestCase("L", 50, TestName = "Test 13")]
         [TestCase("I", 1, TestName = "Test 14")]
-        [TestCase("MDCLXVI", 1666, TestName = "Test 15")]
+        [TestCase("MDCLXVI", 1666, TestName = "MDCLXVI")]
         public void Problem(string roman, int target)
         {
             RomanInterpreter interpreter = new RomanInterpreter();
